@@ -1,5 +1,16 @@
 console.log("Leaforia Ready 🌿");
 
+// NAVBAR SCROLL
+
+window.addEventListener("scroll", function() {
+    const navbar = this.document.querySelector(".navbar");
+    
+    if (this.window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+    } else {
+        navbar.classList.remove("scrolled");
+    }
+})
 // WAKTU DISCOUNT (3 hari dari sekarang)\
 
 const targetDate = new Date();
@@ -27,3 +38,4 @@ function updateCountdown(){
 // update tiap 1 detik
 setInterval(updateCountdown, 1000);
 updateCountdown();
+
